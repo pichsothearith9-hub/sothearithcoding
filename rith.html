@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food App</title>
+    <link rel="stylesheet" href="./rith.css">
+</head>
+<body>
+    <header class="topbar">
+        <h2>🍔 អាហាសម្រន់</h2>
+        <label class="switch">
+            <input type="checkbox" id="toggle">
+            <span class="slider"></span>
+        </label>
+    </header>
+    <section class="page active" id="home">
+        <h3>មុខម្ហូប</h3>
+        <div class="grid">
+            <div class="card">
+                <img height=600px" src="../rith1.jpg">
+                <h4>សាច់អាំងចង្កាក់</h4>
+                <p>១០០រៀល</p>
+                <button onclick="addCart('Burger', 3.99)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img height="600px" src="../rith2.jpg">
+                <h4>បុកល្ហុង</h4>
+                <p>១០០០០រៀល</p>
+                <button onclick="addCart('Pizza', 5.99)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img height="600px" src="../rith3.jpg">
+                <h4>មីឆាពងទា</h4>
+                <p>៤០០០រៀល</p>
+                <button onclick="addCart('Chicken', 4.50)">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img height="600px" src="https://scontent.fpnh18-3.fna.fbcdn.net/v/t39.30808-6/481700802_621459580643748_2836784299770763201_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeHKSlmEMUN_UftFThLlmrjvZNZQTR3Lt8Fk1lBNHcu3wVxHKWEGukKkebYAmuUw54E8t0fALeRLbxZchuC4t5Rl&_nc_ohc=jTEB1rkutVEQ7kNvwHEx6pN&_nc_oc=AdqRrcaqbMBA2RmnYR_TYnwzFZl0ibVbxrzQBjP8VNBpOaDBVZUorBHyvuu0B09rXqs&_nc_zt=23&_nc_ht=scontent.fpnh18-3.fna&_nc_gid=upQPFtlF2lb_FSu1vUU5ow&_nc_ss=7a3a8&oh=00_Af061LXeEffzELBKDekKVPF4CSv26j8VqR_56rvkbZTzPg&oe=69DC1CA8">
+                <h4>ប្រហិតចៀន</h4>
+                <p>៥០០០-១០០០០រៀល</p>
+                <button onclick="addCart('Drink', 2.00)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <section class="page" id="cart">
+        <h3>Your Cart</h3>
+        <ul id="cart-items"></ul>
+        <h4>Total: $<span id="total">0.00</span></h4>
+        <button id="checkout" onclick="checkout()">Checkout</button>
+    </section>
+    <section class="page" id="order">
+        <h3>Order Summary</h3>
+        <ul id="order-items"></ul>
+        <h4>Total Paid: $<span id="order-total">0.00</span></h4>
+        <button onclick="finishOrder()">Finish</button>
+    </section>
+    <nav class="bottom-nav">
+        <div onclick="showPage('home')">🏠</div>
+        <div onclick="showPage('cart')">🛒</div>
+    </nav>
+    <script src="./rith.js"></script>
+</body>
+
+</html>
